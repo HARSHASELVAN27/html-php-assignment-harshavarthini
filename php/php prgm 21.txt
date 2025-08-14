@@ -1,0 +1,23 @@
+<?php
+function isLeapYear($year) {
+    // Leap year if divisible by 4 and (not divisible by 100 unless divisible by 400)
+    if (($year % 4 == 0 && $year % 100 != 0) || ($year % 400 == 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Example usage
+$year = 2025;
+if (isLeapYear($year)) {
+    echo "$year is a leap year.";
+} else {
+    echo "$year is not a leap year.";
+}
+?>
+
+
+2025 is not a leap year.
+
+=== Code Execution Successful ===
