@@ -1,0 +1,14 @@
+<?php
+$a = 10;
+$b = null;
+$c;
+
+echo isset($a) ? 'a is set and not null' : 'a is not set or is null'; // Outputs: a is set and not null
+echo isset($b) ? 'b is set and not null' : 'b is not set or is null'; // Outputs: b is not set or is null
+echo isset($c) ? 'c is set and not null' : 'c is not set or is null'; // Outputs: c is not set or is null
+?>
+
+output:
+a is set and not nullb is not set or is nullc is not set or is null
+
+=== Code Execution Successful ===

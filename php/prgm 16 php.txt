@@ -1,0 +1,32 @@
+#!/usr/bin/php
+<?php
+// Ensure the script is run from the command line
+if (php_sapi_name() !== 'cli') {
+    echo "Please run this script via the command line.\n";
+    exit(1);
+}
+
+// Prompt for the first number
+fwrite(STDOUT, "Enter the first number: ");
+$a = trim(fgets(STDIN));
+
+// Prompt for the second number
+fwrite(STDOUT, "Enter the second number: ");
+$b = trim(fgets(STDIN));
+
+// Convert inputs to numbers
+$num1 = floatval($a);
+$num2 = floatval($b);
+
+// Calculate and display the sum
+$sum = $num1 + $num2;
+echo "The sum of {$num1} and {$num2} is: {$sum}\n";
+?>
+
+output:
+Enter the first number: 4
+Enter the second number: 5
+The sum of 4 and 5 is: 9
+
+
+=== Code Execution Successful ===

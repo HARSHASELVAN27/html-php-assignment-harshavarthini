@@ -1,0 +1,21 @@
+<?php
+function sumDigitsByString($number) {
+    $sum = 0;
+    $numberStr = (string)$number;
+    for ($i = 0; $i < strlen($numberStr); $i++) {
+        $sum += (int)$numberStr[$i];
+    }
+    return $sum;
+}
+
+// Example usage
+$number = 12345;
+echo "Sum of digits (string method) of $number is: " . sumDigitsByString($number) . "\n";
+?>
+
+output:
+Sum of digits (string method) of 12345 is: 15
+
+
+
+=== Code Execution Successful ===

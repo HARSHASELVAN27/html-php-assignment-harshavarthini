@@ -1,0 +1,27 @@
+<?php
+// Function to determine grade based on marks
+function determineGrade($marks) {
+    if ($marks >= 75) {
+        return "First Class";
+    } elseif ($marks >= 60) {
+        return "Second Class";
+    } elseif ($marks >= 40) {
+        return "Third Class";
+    } else {
+        return "Fail";
+    }
+}
+
+// Sample marks array
+$marksArray = [85, 72, 90, 65, 55, 38, 95, 60];
+
+// Loop through each student's marks and display their grade
+foreach ($marksArray as $marks) {
+    echo "Marks: $marks - Grade: " . determineGrade($marks) . "<br>";
+}
+?>
+
+output:
+Marks: 85 - Grade: First Class<br>Marks: 72 - Grade: Second Class<br>Marks: 90 - Grade: First Class<br>Marks: 65 - Grade: Second Class<br>Marks: 55 - Grade: Third Class<br>Marks: 38 - Grade: Fail<br>Marks: 95 - Grade: First Class<br>Marks: 60 - Grade: Second Class<br>
+
+=== Code Execution Successful ===

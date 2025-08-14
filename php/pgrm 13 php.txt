@@ -1,0 +1,8 @@
+<?php
+$sub = substr(12345, 2, 2); // PHP will cast the integer 12345 to the string "12345"
+echo "sub is $sub";          // Outputs: sub is 34
+
+output:
+sub is 34
+
+=== Code Execution Successful ===

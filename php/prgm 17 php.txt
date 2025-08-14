@@ -1,0 +1,70 @@
+<?php
+// Initialize customer data (account number => balance)
+$accounts = [
+    '1001' => 5000,
+    '1002' => 3000,
+    '1003' => 0
+];
+
+// Sample transactions to process
+$transactions = [
+    ['acct' => '1001', 'type' => 'deposit',  'amount' => 1500],
+    ['acct' => '1002', 'type' => 'withdraw', 'amount' => 3500],
+    ['acct' => '1003', 'type' => 'withdraw', 'amount' => 500],
+    ['acct' => '1004', 'type' => 'deposit',  'amount' => 100]
+];
+
+// Process each transaction using loops and conditionals
+foreach ($transactions as $tx) {
+    $acct = $tx['acct'];
+    $type = $tx['type'];
+    $amt  = $tx['amount'];
+
+    echo "Account #$acct: ";
+
+    // Check if account exists
+    if (!isset($accounts[$acct])) {
+        echo "Error – Account does not exist.\n";
+        continue;
+    }
+
+    // Handle transaction type
+    switch ($type) {
+        case 'deposit':
+            $accounts[$acct] += $amt;
+            echo "Deposited ₹$amt. New balance: ₹{$accounts[$acct]}.\n";
+            break;
+
+        case 'withdraw':
+            if ($amt <= $accounts[$acct]) {
+                $accounts[$acct] -= $amt;
+                echo "Withdrew ₹$amt. New balance: ₹{$accounts[$acct]}.\n";
+            } else {
+                echo "Insufficient funds: balance is ₹{$accounts[$acct]}, cannot withdraw ₹$amt.\n";
+            }
+            break;
+
+        default:
+            echo "Transaction type '$type' not recognized.\n";
+    }
+}
+
+echo "\nFinal account balances:\n";
+foreach ($accounts as $acct => $bal) {
+    echo " - Account #$acct: ₹$bal\n";
+}
+?>
+
+output:
+Account #1001: Deposited ₹1500. New balance: ₹6500.
+Account #1002: Insufficient funds: balance is ₹3000, cannot withdraw ₹3500.
+Account #1003: Insufficient funds: balance is ₹0, cannot withdraw ₹500.
+Account #1004: Error – Account does not exist.
+
+Final account balances:
+ - Account #1001: ₹6500
+ - Account #1002: ₹3000
+ - Account #1003: ₹0
+
+
+=== Code Execution Successful ===
