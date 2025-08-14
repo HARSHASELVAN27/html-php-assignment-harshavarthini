@@ -1,0 +1,37 @@
+<?php
+// Array of students with their marks
+$students = [
+    "Alice" => 95,
+    "Bob" => 82,
+    "Charlie" => 76,
+    "Diana" => 63,
+    "Ethan" => 58
+];
+
+// Function to calculate grade
+function getGrade($marks) {
+    if ($marks >= 90 && $marks <= 100) {
+        return 'A';
+    } elseif ($marks >= 80) {
+        return 'B';
+    } elseif ($marks >= 70) {
+        return 'C';
+    } elseif ($marks >= 60) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+// Loop through each student and display their grade
+foreach ($students as $name => $marks) {
+    $grade = getGrade($marks);
+    echo "Student: $name - Marks: $marks - Grade: $grade<br>";
+}
+?>
+
+output:
+Student: Alice - Marks: 95 - Grade: A<br>Student: Bob - Marks: 82 - Grade: B<br>Student: Charlie - Marks: 76 - Grade: C<br>Student: Diana - Marks: 63 - Grade: D<br>Student: Ethan - Marks: 58 - Grade: F<br>
+
+
+=== Code Execution Successful ===
