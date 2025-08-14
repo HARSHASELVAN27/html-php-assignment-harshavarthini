@@ -1,0 +1,65 @@
+<?php
+// Processing GET request (Search)
+$searchResult = "";
+if (isset($_GET['query'])) {
+    $search = trim($_GET['query']);
+    if ($search !== "") {
+        $searchResult = "You searched for: " . htmlspecialchars($search);
+    } else {
+        $searchResult = "Please enter a search term.";
+    }
+}
+
+// Processing POST request (Registration)
+$registerResult = "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user = trim($_POST['username'] ?? '');
+    $pass = trim($_POST['password'] ?? '');
+
+    if ($user === "" || $pass === "") {
+        $registerResult = "Please fill in both username and password.";
+    } else {
+        // In real app, hash password & save user here
+        $registerResult = "User '" . htmlspecialchars($user) . "' registered successfully!";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GET and POST Example</title>
+</head>
+<body>
+
+<h2>Search (using GET)</h2>
+<form method="get" action="">
+    <input type="text" name="query" placeholder="Search books..." value="<?php echo htmlspecialchars($_GET['query'] ?? ''); ?>">
+    <input type="submit" value="Search">
+</form>
+<p><?php echo $searchResult; ?></p>
+
+<hr>
+
+<h2>Register (using POST)</h2>
+<form method="post" action="">
+    Username: <input type="text" name="username" value="<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>"><br><br>
+    Password: <input type="password" name="password"><br><br>
+    <input type="submit" value="Register">
+</form>
+<p><?php echo $registerResult; ?></p>
+
+</body>
+</html>
+
+Search (using GET)
+<?php echo htmlspecialchars($_GET['query'] ?? ''); ?>
+ 
+
+Register (using POST)
+Username: 
+<?php echo htmlspecialchars($_POST['username'] ?? ''); ?>
+
+
+Password: 
+
+

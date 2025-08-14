@@ -1,0 +1,89 @@
+<?php
+// Original string
+$original = "  Hello, PHP String Functions! Let's Learn.  ";
+
+echo "<h3>Original String:</h3>";
+echo "<pre>$original</pre>";
+
+echo "<h3>String Function Demonstrations:</h3>";
+
+// 1. trim()
+echo "1. trim(): <b>" . trim($original) . "</b><br>";
+
+// 2. strlen()
+echo "2. strlen(): <b>" . strlen($original) . "</b><br>";
+
+// 3. str_word_count()
+echo "3. str_word_count(): <b>" . str_word_count($original) . "</b><br>";
+
+// 4. strtolower()
+echo "4. strtolower(): <b>" . strtolower($original) . "</b><br>";
+
+// 5. strtoupper()
+echo "5. strtoupper(): <b>" . strtoupper($original) . "</b><br>";
+
+// 6. ucfirst()
+echo "6. ucfirst(): <b>" . ucfirst(trim($original)) . "</b><br>";
+
+// 7. ucwords()
+echo "7. ucwords(): <b>" . ucwords(strtolower(trim($original))) . "</b><br>";
+
+// 8. strrev()
+echo "8. strrev(): <b>" . strrev($original) . "</b><br>";
+
+// 9. substr()
+echo "9. substr(7, 10): <b>" . substr($original, 7, 10) . "</b><br>";
+
+// 10. strpos()
+echo "10. strpos('PHP'): <b>" . strpos($original, "PHP") . "</b><br>";
+
+// 11. str_replace()
+echo "11. str_replace('PHP', 'Web', ...): <b>" . str_replace("PHP", "Web", $original) . "</b><br>";
+
+// 12. explode()
+$words = explode(" ", trim($original));
+echo "12. explode(): <pre>";
+print_r($words);
+echo "</pre>";
+
+// 13. implode()
+echo "13. implode(): <b>" . implode(" - ", $words) . "</b><br>";
+
+// 14. str_repeat()
+echo "14. str_repeat('*', 10): <b>" . str_repeat("*", 10) . "</b><br>";
+
+// 15. similar_text()
+similar_text("Hello PHP", "Hello Python", $percent);
+echo "15. similar_text(): <b>$percent %</b> similarity<br>";
+
+// 16. number_format()
+$number = 1234567.8912;
+echo "16. number_format(): <b>" . number_format($number, 2) . "</b><br>";
+
+// 17. htmlentities()
+$html = "<b>Bold</b>";
+echo "17. htmlentities(): <b>" . htmlentities($html) . "</b><br>";
+
+// 18. htmlspecialchars()
+$special = "<script>alert('x')</script>";
+echo "18. htmlspecialchars(): <b>" . htmlspecialchars($special) . "</b><br>";
+
+// 19. md5()
+echo "19. md5(): <b>" . md5($original) . "</b><br>";
+
+// 20. sha1()
+echo "20. sha1(): <b>" . sha1($original) . "</b><br>";
+?>
+
+
+
+    [0] => Hello,
+    [1] => PHP
+    [2] => String
+    [3] => Functions!
+    [4] => Let's
+    [5] => Learn.
+)
+</pre>13. implode(): <b>Hello, - PHP - String - Functions! - Let's - Learn.</b><br>14. str_repeat('*', 10): <b>**********</b><br>15. similar_text(): <b>66.666666666667 %</b> similarity<br>16. number_format(): <b>1,234,567.89</b><br>17. htmlentities(): <b>&lt;b&gt;Bold&lt;/b&gt;</b><br>18. htmlspecialchars(): <b>&lt;script&gt;alert(&#039;x&#039;)&lt;/script&gt;</b><br>19. md5(): <b>7cc545b5b08eae1ac23aebf003284d5f</b><br>20. sha1(): <b>9d25c4264852481bd5dd8255fe27bb83771d1377</b><br>
+
+=== Code Execution Successful ===

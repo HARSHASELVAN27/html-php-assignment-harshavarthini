@@ -1,0 +1,10 @@
+<?php
+$a = 10;
+$b = 5;
+$sum = $a + $b;
+echo "Addition: $a + $b = $sum<br>";  // Output: 10 + 5 = 15
+?>
+
+Addition: 10 + 5 = 15<br>
+
+=== Code Execution Successful ===

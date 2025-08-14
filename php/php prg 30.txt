@@ -1,0 +1,30 @@
+<?php
+function generatePassword($length = 12) {
+    // Define characters to use
+    $upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $lower = 'abcdefghijklmnopqrstuvwxyz';
+    $numbers = '0123456789';
+    $special = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+
+    // Combine all characters
+    $allChars = $upper . $lower . $numbers . $special;
+
+    // Shuffle and generate password
+    $password = '';
+    $maxIndex = strlen($allChars) - 1;
+
+    for ($i = 0; $i < $length; $i++) {
+        $password .= $allChars[rand(0, $maxIndex)];
+    }
+
+    return $password;
+}
+
+// Example usage
+echo "<h3>Your Random Password:</h3>";
+echo "<p><strong>" . generatePassword(12) . "</strong></p>";
+?>
+
+<h3>Your Random Password:</h3><p><strong>%ALE7)gXnknE</strong></p>
+
+=== Code Execution Successful ===

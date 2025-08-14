@@ -1,0 +1,27 @@
+<?php
+for ($row = 1; $row <= 8; $row++) {
+    for ($col = 1; $col <= 8; $col++) {
+        $sum = $row + $col;
+
+        // Use Unicode blocks or characters for black and white squares
+        if ($sum % 2 == 0) {
+            echo "[ ]"; // White square
+        } else {
+            echo "[#]"; // Black square
+        }
+    }
+    echo "\n"; // New line after each row
+}
+?>
+
+[ ][#][ ][#][ ][#][ ][#]
+[#][ ][#][ ][#][ ][#][ ]
+[ ][#][ ][#][ ][#][ ][#]
+[#][ ][#][ ][#][ ][#][ ]
+[ ][#][ ][#][ ][#][ ][#]
+[#][ ][#][ ][#][ ][#][ ]
+[ ][#][ ][#][ ][#][ ][#]
+[#][ ][#][ ][#][ ][#][ ]
+
+
+=== Code Execution Successful ===

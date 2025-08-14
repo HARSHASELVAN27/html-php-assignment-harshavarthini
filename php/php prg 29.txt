@@ -1,0 +1,31 @@
+<?php
+echo "<h2>PHP Function Demonstrations</h2>";
+
+// (i) rand()
+$random = rand(1, 100);
+echo "1. Random number between 1 and 100 (rand()): <b>$random</b><br>";
+
+// (ii) abs()
+$negativeNumber = -25;
+$absolute = abs($negativeNumber);
+echo "2. Absolute value of -25 (abs()): <b>$absolute</b><br>";
+
+// (iii) str_replace()
+$originalString = "PHP is old but gold.";
+$replacedString = str_replace("old", "powerful", $originalString);
+echo "3. Replacing 'old' with 'powerful' (str_replace()): <b>$replacedString</b><br>";
+
+// (iv) pi()
+$piValue = pi();
+echo "4. Value of π (pi()): <b>$piValue</b><br>";
+
+// (v) ceil()
+$floatNumber = 4.3;
+$ceiled = ceil($floatNumber);
+echo "5. Ceiling of 4.3 (ceil()): <b>$ceiled</b><br>";
+?>
+
+
+<h2>PHP Function Demonstrations</h2>1. Random number between 1 and 100 (rand()): <b>3</b><br>2. Absolute value of -25 (abs()): <b>25</b><br>3. Replacing 'old' with 'powerful' (str_replace()): <b>PHP is powerful but gpowerful.</b><br>4. Value of π (pi()): <b>3.1415926535898</b><br>5. Ceiling of 4.3 (ceil()): <b>5</b><br>
+
+=== Code Execution Successful ===
