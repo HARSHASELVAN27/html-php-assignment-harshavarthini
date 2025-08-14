@@ -1,0 +1,38 @@
+<?php
+function deal() {
+    // Drink A details
+    $costA = 25;
+    $sizeA = 11;
+
+    // Drink B details
+    $costB = 23;
+    $sizeB = 9;
+
+    // Calculate cost per unit size
+    $valueA = $costA / $sizeA;  // Rs per unit
+    $valueB = $costB / $sizeB;  // Rs per unit
+
+    echo "Cost per unit size:<br>";
+    echo "Drink A: Rs. " . round($valueA, 2) . "<br>";
+    echo "Drink B: Rs. " . round($valueB, 2) . "<br><br>";
+
+    // Compare and decide
+    if ($valueA < $valueB) {
+        echo "👉 Choose Drink A to save money.";
+    } elseif ($valueB < $valueA) {
+        echo "👉 Choose Drink B to save money.";
+    } else {
+        echo "👉 Both drinks offer the same value.";
+    }
+}
+
+// Call the function
+deal();
+?>
+
+output:
+
+Cost per unit size:<br>Drink A: Rs. 2.27<br>Drink B: Rs. 2.56<br><br>👉 Choose Drink A to save money.
+
+
+=== Code Execution Successful ===
