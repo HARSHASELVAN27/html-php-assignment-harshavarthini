@@ -1,0 +1,12 @@
+Q65) SAME AS (35)
+
+<?php
+$arr = [10, 20, 30, 40];
+
+echo count($arr) . "\n";
+echo sizeof($arr) . "\n";
+?>
+
+OUTPUT:
+4
+4
